@@ -1,0 +1,24 @@
+
+curl -X POST http://localhost:5001/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "how many rows in the dataset?"}'
+
+{"answer":"85229"}
+
+
+
+
+curl -X POST http://localhost:5001/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "what are the top 10 countries with more conflicts last month?"}'
+
+{"answer":"[{\"country\":\"Ukraine\",\"total_conflicts\":5402.0},{\"country\":\"Palestine\",\"total_conflicts\":1750.0},{\"country\":\"India\",\"total_conflicts\":1575.0},{\"country\":\"Mexico\",\"total_conflicts\":1360.0},{\"country\":\"Russia\",\"total_conflicts\":1304.0},{\"country\":\"Yemen\",\"total_conflicts\":1054.0},{\"country\":\"Myanmar\",\"total_conflicts\":930.0},{\"country\":\"Pakistan\",\"total_conflicts\":773.0},{\"country\":\"United States\",\"total_conflicts\":757.0},{\"country\":\"Brazil\",\"total_conflicts\":709.0}]"}
+
+
+
+curl -X POST http://localhost:5001/ask \
+  -H "Content-Type: application/json" \
+  -d '{"question": "plot a chat with the top 10 countries with more conflicts last month?"}'
+
+{"answer":"exports/charts/temp_chart_39f75404-8c89-40df-99b7-cf8677b1b894.png","plot_url":"exports/charts/d4b9d905e6204c7782b9f4f6120ae391.png"}
+

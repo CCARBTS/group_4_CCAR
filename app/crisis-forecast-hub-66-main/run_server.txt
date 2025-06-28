@@ -1,0 +1,22 @@
+user@E-5CG1501S9B:~/BTS/finalProject/CCAR/app/crisis-forecast-hub-66-main/src$ npm run dev
+
+> vite_react_shadcn_ts@0.0.0 dev
+> vite
+
+
+  VITE v5.4.19  ready in 190 ms
+
+  ➜  Local:   http://localhost:8080/
+  ➜  Network: http://172.24.175.170:8080/
+  ➜  Network: http://172.17.0.1:8080/
+  ➜  press h + enter to show help
+
+
+
+
+
+user@E-5CG1501S9B:~/BTS/finalProject/CCAR/app/crisis-forecast-hub-66-main/src$ node server.js
+API server running on port 3001
+
+
+
