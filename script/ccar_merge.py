@@ -12,7 +12,7 @@ def main():
     df_acled = pd.read_csv('data/ACLED/cleaned_acled.csv')
     df_emdat = pd.read_csv('data/EM-DAT/cleaned_em_dat.csv')
     df_hdi   = pd.read_csv('data/HDI/cleaned_hdi.csv')
-    df_iso_countries = pd.read_csv('data/countries_iso_codes.csv')
+    df_iso_countries = pd.read_csv('data/countries_codes_and_coordinates.csv')
 
     df_acled['event_date'] = pd.to_datetime(df_acled['event_date'], errors='coerce')
     df_acled['week_number'] = df_acled['event_date'].dt.isocalendar().week
@@ -85,13 +85,15 @@ def main():
 
     disaster_data = disaster_data.rename(columns={"Start Year": "year", "Country": "country"})
 
+    df_iso_countries = df_iso_countries[['country','alpha_3','iso']]
+
     df_conflict = pd.merge(df_conflict, df_iso_countries, on=['iso'], how='left')
 
     df_conflict = df_conflict.drop(columns=["iso"])
 
-    df_conflict = df_conflict.drop(columns=["Country"])
+    df_conflict = df_conflict.drop(columns=["country"])
 
-    df_conflict = df_conflict.rename(columns={"Alpha_3": "ISO"})
+    df_conflict = df_conflict.rename(columns={"alpha_3": "ISO"})
 
     # Merge datasets
     df_merged = pd.merge(
