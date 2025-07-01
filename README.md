@@ -3,15 +3,18 @@ This code repository (or "repo") is designed to demonstrate the CCAR code projec
 
 Edit the .env file - variables:
 # .env
-ACLED_API_KEY=<your acled api key>
-ACLED_API_EMAIL=<your acled api email>
-EM_DAT_USER=<your EM-DAT user>
-PANDAS_AI_API_KEY=<your Pandas AI api key>
-EM_DAT_PASSWD=<your EM DAT password>
-PG_DB_USER=<your postgres user>
-PG_DB_PASSWORD=<your pstgres password>
-PG_DB_HOST=<your postgres host>
-PG_DB_PORT=<your postgres port>
-PG_DB_NAME=<your postgres database name>
-PG_DB_SCHEMA=<your postgres schema name>
-DEBUG=<True or False>
+| Variable            | Description                  |
+|---------------------|------------------------------|
+| `ACLED_API_KEY`     | Your ACLED API key           |
+| `ACLED_API_EMAIL`   | Your ACLED account email     |
+| `EM_DAT_USER`       | EM-DAT username              |
+| `PANDAS_AI_API_KEY` | Pandas AI API key            |
+| `EM_DAT_PASSWD`     | EM-DAT password              |
+| `PG_DB_USER`        | PostgreSQL DB username       |
+| `PG_DB_PASSWORD`    | PostgreSQL DB password       |
+| `PG_DB_HOST`        | PostgreSQL DB host           |
+| `PG_DB_PORT`        | PostgreSQL DB port           |
+| `PG_DB_NAME`        | PostgreSQL database name     |
+| `PG_DB_SCHEMA`      | PostgreSQL schema name       |
+| `DEBUG`             | Debug mode: `True` or `False`|
+
